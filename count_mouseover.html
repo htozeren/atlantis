@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<title>count number of toggle class demo</title>
+  <style>
+  p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+	width:250px;
+	height:250px;
+	background:red;
+  }
+  .blue {
+    color: blue;
+  }
+  .highlight {
+    background: lawngreen;
+  }
+  </style>
+</head>
+<body>
+
+<p class="blue highlight">highlight (<span>clicks: 0</span>)</p>
+<script>
+$( "p" ).each(function() {
+  var $thisParagraph = $( this );
+  var count = 0;
+  $thisParagraph.on("mouseenter mouseleave",function() {
+    count++;
+    $thisParagraph.find( "span" ).text( "clicks: " + count );
+    $thisParagraph.toggleClass( "highlight", count % 2 === 0 );
+	if(count>=10)$thisParagraph.off( "mouseenter mouseleave");
+  });
+});
+</script>
+ 
+</body>
+</html>
