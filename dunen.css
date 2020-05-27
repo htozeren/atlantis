@@ -1,0 +1,611 @@
+﻿html, body, body div, span, object, iframe, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+   .uppercase { text-transform: uppercase; }
+article, aside, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+img {
+	max-width: 100%;
+}
+h1  {
+    font-size:2.7em;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: transparent;
+} 
+h2  {
+    font-size:2em;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: transparent;
+} 
+h3  {
+    font-size:1.17em;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: transparent;
+} 
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+	overflow-y: scroll;
+}
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {
+	list-style: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+input, select {
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+	vertical-align: bottom;
+ vertical-align: baseline;
+}
+
+select, input, textarea {
+	font: 99% sans-serif;
+}
+
+a:hover, a:active {
+	outline: none;
+}
+
+/* hand cursor on clickable elements */
+.clickable, label, input[type=button], input[type=submit], button {
+	cursor: pointer;
+}
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+	margin: 0;
+}
+/* make buttons play nice in IE */
+button {
+	width: auto;
+	overflow: visible;
+}
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+body {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+/* we like off-black for text */
+body, select, input, textarea {
+	color: #333;
+}
+a {
+	color: #03f;
+}
+/*a:hover {
+	color: #69f;light blue
+}*/
+a:hover {
+	color: #e68f2b;/*orange*/
+}
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection {
+background: #fcd700;/*sari*/
+color: yellow;
+text-shadow: none;
+}
+::selection {
+	background: #fcd700;
+	color: #fff;
+	text-shadow: none;
+}
+/*	j.mp/webkit-tap-highlight-color */
+a:link {
+	-webkit-tap-highlight-color: #fcd700;
+}
+
+/*Slideshow*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1280px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.aprev, .anext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.anext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.aprev:hover, .anext:hover {
+  background-color: rgba(0,255,0,0.8);
+}
+
+/* Caption text */
+/*.atext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}*/
+.caption_color_white {
+	font-family:Trebuchet MS, sans-serif;
+	color: #fff;
+	letter-spacing:-2px;
+  /*font-family:Verdana, sans-serif;*/
+	font-weight: normal;
+}
+.caption_color_red {
+	font-family: Impact, sans-serif;
+	color: #ff0000;
+	letter-spacing:-2px;
+  /*font-family:Verdana, sans-serif;*/
+	font-weight: normal;
+}
+.caption_color_blue {
+	font-family:'Arial Narrow', Arial, sans-serif;
+	color: #596cf9;
+	letter-spacing:-2px;
+  /*font-family:Verdana, sans-serif;*/
+	font-weight: normal;
+}
+.atext {
+  /*color: red;
+  font-family:"Courier",serif;
+  font-weight: bold;*/
+  font-size: 60px;
+  position: absolute; 
+  top: 100px;
+  right:0px;
+  width: 0px;
+  height: 70px;
+  overflow: hidden;
+  text-overflow: clip; 
+  border: 1px solid #000000;
+}
+
+/* Number text (1/3 etc) */
+.anumbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.adot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .adot:hover {
+  background-color: red;
+  /*background-color: #717171;*/
+}
+
+/* Fading animation */
+/*.afade {
+-webkit-animation-name: afade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: afade;
+  animation-duration: 1.5s;
+}*/
+
+.aaugment {
+  -webkit-animation-name: aaugment;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode:forwards;
+  animation-name: aaugment;
+  animation-duration: 3s;
+  animation-fill-mode:forwards;
+}
+/*
+@-webkit-keyframes afade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes afade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+*/
+/* New Text animation */
+
+@-webkit-keyframes aaugment {
+    from {width: 0px;}
+    to {width: 1200px;}
+}
+@keyframes aaugment {
+  from {width: 0px;}
+    to {width: 1200px;}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .aprev, .anext,.atext {font-size: 11px}
+}
+----------------------------------------------------------------------*/
+
+/* MyStuff
+-------------------------------------------------------------------------------*/
+body {
+	
+}
+  
+	.wrapper { 
+	width: 100%;
+	/*background: #FFF;*/
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+     }
+	 
+    header {
+    position: relative;
+	height: 60px;
+	color: #333;
+}
+
+/*------- soldaki div elemani ve dolayisiyla logoyu betimliyor----*/
+header  {
+	/*position: fixed;*/
+	z-index: 1;
+}
+
+
+/* Header --------------------- */
+     header nav {
+		 font-family:"Courier",serif;
+         position:fixed;
+		 opacity:0.8;/*ocak*/
+         top:0;
+         width:100%;
+         background: #232121;
+		 font-size:1.2em;
+}
+
+header nav li {
+    list-style: none;
+	display: inline;
+	
+}
+
+header nav li a {
+	margin-top:10px;
+	font-weight:bold;
+	
+	display: block;
+	float: left;
+	text-align:center;
+	text-decoration: none;
+	/*font-size: 1em;*/
+	color:yellow;
+	padding: 24px 20px 24px 20px;
+}
+header nav li a:hover {
+	background-image: -moz-linear-gradient(82% 0% -90deg, rgb(223,121,4) 0%, rgb(252,245,215) 100%);
+	background-image: -webkit-gradient(linear, 82% 0%, 82% 100%, color-stop(0, rgb(223,121,4)), color-stop(1, rgb(252,245,215)));
+	background-image: -webkit-linear-gradient(-90deg, rgb(223,121,4) 0%, rgb(252,245,215) 100%);
+	background-image: -o-linear-gradient(-90deg, rgb(223,121,4) 0%, rgb(252,245,215) 100%);
+	background-image: -ms-linear-gradient(-90deg, rgb(223,121,4) 0%, rgb(252,245,215) 100%);
+	background-image: linear-gradient(-90deg, rgb(223,121,4) 0%, rgb(252,245,215) 100%);
+	color: #000;
+}
+header nav li a:active {
+	/*color: #fcd700;*/
+	color:#00ff00;
+}
+/* Footer --------------------- */
+
+footer {
+	background: #333;
+	width: 100%;
+	height: 160px;
+	bottom: 0;
+	color: #FFF;
+	position: relative;
+	clear: left;
+}
+footer .branding {
+	position: absolute;
+	left: 40px;
+	top: 30px;
+}
+footer .branding img {
+	width: 80px;
+}
+footer .description {
+	position: absolute;
+	text-align:justify;
+	left: 40px;
+	top: 20px;
+	width: 550px;
+	font-size: .8em;
+}
+/* Footer Nav
+-------------------------------------------------------------------------------*/
+footer {
+	color: #FFF;
+}
+footer nav {
+	position: relative;
+	left: 650px;
+	top: 40px;
+	width: 350px;
+}
+footer nav li {
+	display: block;
+	list-style:none;
+}
+footer nav li a {
+	display: block;
+	list-style: none;
+	float: left;
+	text-decoration: none;
+	font-size: .9em;
+	color: #FFF;
+	padding: 0px 10px;
+	border-right: 1px solid #ddd;
+}
+footer nav li:last-child a {
+	border-right: none;
+}
+/* Content
+-------------------------------------------------------------------------------*/
+
+/* Main
+-------------------------------------------------------------------------------*/
+/* Added: About us
+-------------------------------------------------------------------------------*/
+
+.main_home {
+	width: 1280px;
+	display:block;
+	/*:left;*/
+}
+#articles {
+	width:1272;
+	margin:auto;
+}
+ #articles .about {
+    position:relative;
+    width: 360px;
+	depth:400px;
+	padding:30px 20px;
+	margin:30px 30px;
+	border:0.1px solid #e5e5e5;
+	/*float: left;
+	display: block;ocak*/
+	display: inline-block;
+}
+
+
+#articles p { 
+             font-size:1em;/*0.8*/
+             text-align:justify;
+             /*line-height:1.4;*/
+             /*margin-bottom: 10px;*/
+             margin-bottom: 0;
+             padding-right:4px;
+             padding-left:4px;
+}
+#button {
+    float:right;
+    /*background-color: #e68f2b; *//* Orange */
+    background-color: #eae4e0; /* Orange */
+    border: none;
+    color: #333;
+    border-radius: 16px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    vertical-align:text-bottom;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#articles #button:hover {
+    background-color: white; 
+    color: #e68f2b; 
+    border: 2px solid #e68f2b;
+}
+
+  
+    .clearfloat { clear:left;
+    
+}
+    .current_main {
+    position:relative;
+    display:block;
+    width: 1280px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+  #main {
+	width: 1272px;
+	position:relative;
+	/*display:inline-block;ocak*/
+	/*margin: 5px 5px;ocak*/
+	/*margin: 5px 5px;
+	margin-top:0;*/
+	margin:auto;
+	}
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+	margin: 0 0px;
+	color:#555;
+}
+#main p {
+	color:#d9d9d9; 
+	font-size:1.2em;
+	width:900px;
+	margin:auto;
+	text-align:center;
+	padding-right:10px;
+	padding-left:10px;
+	padding-bottom:10px;
+}
+
+#main h1 {
+	font-family:"Courier",serif;
+	font-size:2.0em;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	text-align:center;
+	color:#ff5722;
+}
+#main h2 {
+	font-family:"Courier",serif;
+	font-size:1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 0;/*eskisi 0*/
+	/*background:#305ad3;ocak*/
+    /*color:#fff;ocak*/
+}
+#main h3 {
+	font-size:1em;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	color:red
+}
+#main h4 {
+	font-size:1.1em;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+#main article:nth-of-type(1) h2 {
+	padding-top: 0;
+}
+
+#main ul {
+    line-height:1.4em;
+    margin-left: 0px;
+    font-size:0.8em;
+    font-style:italic;
+    padding: 20px;
+     padding-bottom: 20px;
+}
+#main ol {
+    list-style-type: decimal;
+    /*color:#000;*/
+    /*font-style:italic;*/
+    font-size:1em;
+    margin: 10px 10px;
+    padding-left: 20px;
+    /*list-style-position:outside;*/
+   /*list-style-position:inside;*/
+    padding-bottom: 20px;
+}
+#main ul li a { display:block;
+                   font-size:1em;
+                   font-style:italic;
+                   color:#000;
+                   background-color:red;
+                   padding:5px;
+                   
+}
+#main ol li a { display:block;
+                   /* font-size:1.5em;*/
+                  font-size:1em;
+                   /*font-style:italic;*/
+                   /*color:#000;*/
+                   background-color:yellow;
+				  /* color:#e68f2b;*/
+				  /* background:#305ad3;*/
+                   padding:5px;
+                  
+}
+/* Sidebar
+-------------------------------------------------------------------------------*/
+
+/* Links
+-------------------------------------------------------------------------------*/
+
+a.link {
+	display: block;
+	text-align: right;
+	color: #333;
+}
+a:hover.link {
+	color: #777;/*orta gri*/
+}
+a.link:after {
+	content: ' »';
+}
+/* CURRENT PAGE
+-------------------------------------------------------------------------------*/
+/*--------#page_home #page_current diye degistirildi-----------*/
+
+/* END
+-------------------------------------------------------------------------------*/
+
